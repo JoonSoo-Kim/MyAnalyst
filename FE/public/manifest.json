@@ -1,0 +1,25 @@
+{
+  "short_name": "MyAnalyst",
+  "name": "MyAnalyst - RAG 기반 기업 분석 보고서 생성 서비스",
+  "icons": [
+    {
+      "src": "assets/img/favicon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/img/logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#388da8",
+  "background_color": "#ffffff"
+}

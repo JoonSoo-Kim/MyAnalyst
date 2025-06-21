@@ -1,0 +1,59 @@
+/* public 폴더의 CSS를 직접 참조하지 않고 필요한 스타일만 포함시킴 */
+
+/* React 특화 스타일 오버라이드 */
+.report-container {
+  display: flex;
+  padding-top: 90px;
+}
+
+/* 모든 섹션에 상단 패딩 추가 */
+main section.section {
+  padding-top: 120px;
+}
+
+/* 헤더 아래 섹션이 가려지지 않도록 마진 추가 */
+.login.section, 
+.signup.section {
+  padding-top: 100px;
+}
+
+.sidebar {
+  width: 35%;
+  background-color: #f8f9fa;
+  border-left: 1px solid #dee2e6;
+  padding: 20px;
+  height: calc(100vh - 90px);
+  position: fixed;
+  top: 90px;
+  right: 0;
+  overflow-y: auto;
+}
+
+.main-content {
+  width: 65%; /* 사이드바 너비에 맞춰 조정 */
+  margin-right: 35%; /* 사이드바 너비에 맞춰 조정 */
+  padding: 30px 40px;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 992px) {
+  .sidebar {
+    width: 300px;
+    right: -300px;
+    transition: all 0.3s;
+    z-index: 100;
+  }
+  
+  .sidebar.show {
+    right: 0;
+  }
+  
+  .main-content {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .toggle-sidebar {
+    display: block !important;
+  }
+}

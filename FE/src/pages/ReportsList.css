@@ -1,0 +1,109 @@
+/* 보고서 목록 컴포넌트 스타일 */
+.reports-list-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 120px 0 60px;
+  overflow: hidden;
+}
+
+.hero-img {
+  background-image: url('../assets/img/hero-bg-light.webp');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.reports-list-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.reports-list {
+  background-color: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin: 20px 0;
+}
+
+.page-title {
+  margin-bottom: 30px;
+  position: relative;
+  background-color: transparent;
+}
+
+.page-title:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50px;
+  height: 3px;
+  background-color: #0d6efd;
+}
+
+.report-item {
+  border-bottom: 1px solid #eee;
+  padding: 15px 20px;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.report-item:last-child {
+  border-bottom: none;
+}
+
+.report-item:hover {
+  background-color: rgba(13, 110, 253, 0.05);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.report-item a {
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  width: 100%;
+}
+
+.report-item .date {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.report-item .badge {
+  margin-left: 10px;
+}
+
+/* 반응형 */
+@media (max-width: 992px) {
+  .reports-list {
+    padding: 30px 20px;
+  }
+  
+  .report-item {
+    padding: 15px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .report-item .date {
+    margin-top: 5px;
+  }
+}
